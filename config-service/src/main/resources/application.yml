@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/arkhotech/cloud-config.git
+          basedir: target/config
+security:
+  user:
+    password: '{cipher}AQBKhzF4crlGp2GFrfhy9HstcbIOQn8iAUXDanc3Ug7ULf+E0isvk3+f9rH/BCC6TP81QMKuFtBseq6aT9mIg846IRilbq3qRHgfIEJ4fE7W2Hz+MFtIYamoKKD+4MnXYh9nWittR8ZJGMIrfCOtyaKXL0yQQv7+anXOPdFnKOEUVaFTWjEgBwZipOYf9b2eAQub1iBjoKra0elKgdek7fiO8fIVdT0oTlgbaaelRxMk/HU4UwzixQK+fKBl0bVUwVn7JrOE8OOA6raVgIZ9ennwlgunOJOO1s1AL+NkVCNgjGO8BNcrqPcb0zpXsNV3LmqtjANZDDvBAMaCTCnUlzHFhM/+7QziJBlg6qMAXy8pimvjRi83T710Wx3gyTyUUHI='
+
+encrypt:
+  keyStore:
+    location: file:/Users/Jimmy/cert/server.jks
+    alias: keyconfigservice
+    password: Qpalwosk10
